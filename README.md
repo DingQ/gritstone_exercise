@@ -88,7 +88,7 @@ These helper functions were used to implement unit tests for `search_by_position
 
 These summary statistics were computed with the help of some `pandas` aggregate functions. 
 
-### misc notes 
+### Miscellaneous notes 
 
 An object-oriented solution was briefly considered early in the development cycle. However, this project is essentially the transformation of an input to an output - it is not particularly interactive, and the specification did not request or mention a GUI or API. As part of a larger system, creating an object to hold the data and carry associated methods might make sense, but with no indication of this bigger picture, such an optimization was not pursued at this time. 
 
