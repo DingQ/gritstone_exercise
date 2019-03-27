@@ -25,6 +25,8 @@ def search_by_position_test():
     tests.append(pos_range_search_test())
     tests.append(indiv_pos_search_test())
 
+    print("Aggregate search_by_position():")
+
     # test whole function
     test_data = {'chrom': [6, 9, 6],
                  'start position': [169717822, 136953847, 154931457],
@@ -123,6 +125,7 @@ def parse_chrom_test():
     returns:
     boolean reporting whether function passed all tests
     """
+    print("Chromosome number parsing:")
     tests = []
 
     tests.append(valid_test(
@@ -140,6 +143,8 @@ def parse_chrom_test():
     tests.append(invalid_test(
         "missing prefix chromosome number", parse_chrom, "5"))
 
+    print()
+
     return(all(tests))
 
 
@@ -156,6 +161,7 @@ def valid_pos_test():
     returns:
     boolean reporting whether function passed all tests
     """
+    print("Position number validation:")
     tests = []
 
     tests.append(valid_test("min valid position number", valid_pos, 1, 1))
@@ -168,6 +174,8 @@ def valid_pos_test():
     tests.append(invalid_test("not a number position number",
                               valid_pos, "asdf1234qwer0987"))
     tests.append(invalid_test("noninteger position number", valid_pos, 2.53))
+
+    print()
 
     return(all(tests))
 
@@ -185,6 +193,7 @@ def pos_range_search_test():
     returns:
     boolean reporting whether function passed all tests
     """
+    print("Searching position by range:")
     test_data = {'chrom': [4, 4, 4],
                  'start position': [169717822, 136953847, 154931457],
                  'end position': [169717906, 136954255, 154931577],
@@ -205,6 +214,8 @@ def pos_range_search_test():
     tests.append(valid_test("nonoverlap range search", pos_range_search,
                             test_df.iloc[0:0], test_df, pd.Series([3, 500])))
 
+    print()
+
     return(all(tests))
 
 
@@ -221,6 +232,7 @@ def indiv_pos_search_test():
     returns:
     boolean reporting whether function passed all tests
     """
+    print("Searching position by single location:")
     test_data = {'chrom': [4, 4, 4],
                  'start position': [169717822, 136953847, 169717821],
                  'end position': [169717906, 136954255, 169717907],
@@ -236,6 +248,8 @@ def indiv_pos_search_test():
                             indiv_pos_search, test_df.loc[[0, 2]], test_df, 169717850))
     tests.append(valid_test("no result indiv search",
                             indiv_pos_search, test_df.iloc[0:0], test_df, 300))
+
+    print()
 
     return(all(tests))
 

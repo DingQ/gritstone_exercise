@@ -13,6 +13,12 @@ This project was developed in `Python 3.6.5` with the following external librari
 numpy 1.16.2
 pandas 0.24.2
 ```
+Also tested in a second environment: 
+```
+python 3.6.6
+numpy 1.14.5
+pandas 0.24.2
+```
 
 ### Installation
 
