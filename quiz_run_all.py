@@ -19,7 +19,7 @@ def wait_enter():
 	returns:
 	none
 	"""
-    input('\n' + "Press Enter to continue")
+	input('\n' + "Press Enter to continue")
 
 
 def main():
