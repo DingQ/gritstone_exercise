@@ -83,6 +83,8 @@ These helper functions were used to implement unit tests for `search_by_position
  - searching position by range 
  - searching position by single location
  - the aggregate search_by_position function
+ 
+ Sample data used by these tests are defined entirely within the test methods, thus gapping the tests from the filesystem. 
 
 ### summary.py
 
